@@ -38,11 +38,17 @@ Struktur repository:
 
 ## Pengerjaan
 
-> Insert poin soal...
+> Fork
 
 **Teori**
 
-...
+Panggilan sistem fork memungkinkan pembuatan proses baru dalam sistem operasi. Ketika suatu proses memanggil fork (), maka proses tersebut akan menduplikasi dirinya, sehingga menghasilkan dua proses yang berjalan pada saat yang bersamaan. Berikut beberapa istilak yang digunakan dalam Fork System Call:
+- Proses
+- Parent Process
+- Child Process
+- Process ID
+- Copy-on-Write
+- Return Value
 
 **Solusi**
 
