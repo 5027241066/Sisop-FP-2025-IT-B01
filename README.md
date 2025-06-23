@@ -38,11 +38,30 @@ Struktur repository:
 
 ## Pengerjaan
 
-> Fork
+> Proses dan Identitas Proses
 
 **Teori**
 
-Panggilan sistem fork memungkinkan pembuatan proses baru dalam sistem operasi. Ketika suatu proses memanggil fork (), maka proses tersebut akan menduplikasi dirinya, sehingga menghasilkan dua proses yang berjalan pada saat yang bersamaan. Berikut beberapa istilak yang digunakan dalam Fork System Call:
+Proses adalah program yang sedang dieksekusi. Dalam sistem operasi, setiap proses memiliki identitas unik berupa Process ID (PID) dan Parent Process ID (PPID) yang menunjukkan proses induk. Proses dapat membuat proses baru menggunakan sistem call seperti fork(). Setiap proses memiliki dua identitas penting:
+
+- PID (Process ID): Nomor unik yang diberikan oleh sistem untuk mengidentifikasi proses.
+- PPID (Parent Process ID): PID dari proses induk yang membuat proses tersebut.
+
+Proses membentuk hierarki yang dapat digambarkan dalam bentuk process tree, dimana satu proses induk dapat memiliki beberapa proses anak (child process).
+
+**Solusi**
+
+Buat menu dengan opsi:
+- Buat proses (fork baru).
+- Tampilkan visualisasi pohon proses.
+- Keluar dari program.
+
+
+> Sistem Call Fork
+
+**Teori**
+
+fork() adalah sistem call di UNIX/Linux yang digunakan untuk menciptakan proses baru. Proses yang terbentuk disebut child process yang akan menjadi turunan dari proses induknya (parent process). Berikut ini beberapa jenis fork process:
 - Proses
 - Parent Process
 - Child Process
