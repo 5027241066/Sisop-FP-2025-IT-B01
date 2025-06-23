@@ -17,10 +17,10 @@
 
 Nama | NRP
 --- | ---
-... | 5027241xxx
-... | 5027241xxx
-... | 5027241xxx
-... | 5027241xxx
+Balqis Sani Sabillah | 5027241002
+Dira Muhammad Ilyas Shafar Anwar | 5027241033
+Ahmad Yafi Ar Rizq | 5027241066
+Nadia Fauziazahra Kusumastuti | 5027241094
 
 ## Deskripsi Soal
 
