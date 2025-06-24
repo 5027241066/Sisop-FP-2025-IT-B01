@@ -33,7 +33,8 @@ Memvisualisasikan proses fork dalam sistem. Program menyediakan menu untuk membu
 Struktur repository:
 ```
 .
-..
+├── fork.c
+└── README.md
 ```
 
 ## Pengerjaan
@@ -70,5 +71,7 @@ Untuk membangun dan menampilkan pohon proses, semua data PID dan hubungan parent
 ## Daftar Pustaka
 
 Sitasi 1
+Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). Operating System Concepts. Wiley.
+
 Sitasi 2
 Sitasi 3
