@@ -41,18 +41,85 @@ Struktur repository:
 
 > Buat program dengan menu untuk membuat fork dan menampilkan visualisasi fork yang dibuat (PID, PPID, dan hubungan garis).
 
-**Teori**
+### **Teori**
 
-Dalam sistem operasi, proses adalah program yang sedang berjalan, memiliki PID (Process ID) dan PPID (Parent Process ID). Proses dapat membuat child process menggunakan system call fork(). Namun, fork() membuat proses baru dengan memori terpisah sehingga data child tidak otomatis tersimpan di parent.
+##### 1. Konsep Fork dan Hirarki Proses (Silberschatz)
+Dalam sistem operasi modern seperti Unix/Linux, fork() adalah sistem call untuk membuat proses baru. Proses baru akan menjadi salinan dari proses pemanggil, membentuk hubungan induk-anak (parent-child). Proses-proses ini secara alami membentuk sebuah process tree atau pohon proses, seperti ditunjukkan pada Figure 3.9 di buku Silberschatz.
 
-Untuk membangun dan menampilkan pohon proses, semua data PID dan hubungan parent-child harus tersimpan dalam satu memori yang sama. Oleh karena itu, simulasi fork lebih tepat digunakan agar pohon proses dapat ditampilkan secara utuh dan konsisten dalam satu program.
+“Each of these new processes may in turn create other processes, forming a tree of processes.”
+— Silberschatz, Operating System Concepts Essentials, p. 111
 
-**Solusi**
+##### 2. Deskripsi dan Struktur Proses (Stallings)
+William Stallings menjelaskan bahwa setiap proses dalam sistem OS memiliki atribut penting seperti:
 
-- Menu interaktif: membuat fork, menampilkan pohon proses, dan keluar.
-- Setiap proses disimpan sebagai node dengan PID dan PPID.
-- Fork disimulasikan dengan memberi PID baru dan mencatat relasinya.
-- Visualisasi ditampilkan dengan traversal rekursif dan indentasi pohon.
+PID (Process ID)
+
+PPID (Parent Process ID)
+
+State (status proses: running, ready, blocked)
+
+Child pointer list (untuk proses anak)
+
+Proses ini dikelola melalui Process Control Block (PCB) yang menyimpan semua informasi penting proses.
+
+##### 3. Visualisasi Hirarki Proses (Tanenbaum)
+Tanenbaum menjelaskan bahwa proses dapat digambarkan sebagai struktur tree karena adanya relasi orang tua-anak antar proses. Setiap node memiliki PID, PPID, dan dapat memiliki banyak anak. Konsep ini penting untuk memahami interaksi proses dan manajemen memori/eksekusi.
+
+“Since children may also have children, an original process can build up an entire tree of children, grandchildren, and further descendants.”
+— Tanenbaum, Modern Operating Systems, p. 737
+
+#### **Solusi**
+Struktur Data
+typedef struct ProcessNode {
+    int pid;
+    int ppid;
+    int childCount;
+    struct ProcessNode* children[10];
+} ProcessNode;
+Struct ProcessNode adalah representasi simpul pohon proses.
+Setiap simpul menyimpan:
+
+PID: ID unik proses
+
+PPID: ID parent
+
+ChildCount dan array pointer ke proses anak
+
+Simulasi Fork
+```
+ProcessNode* child = createProcessNode(currentPID++, parent->pid);
+```
+Saat pengguna memilih “Buat Fork” dari menu, proses anak baru dibuat dan ditambahkan ke parent->children.
+
+Fungsi createProcessNode() menciptakan proses baru dengan PID unik.
+
+Proses ini tidak benar-benar memanggil fork() OS, tapi hanya membuat objek baru di memori dan menghubungkannya dengan induknya.
+
+Visualisasi Pohon
+```
+void displayProcessTree(ProcessNode* node, int depth) {
+    for (int i = 0; i < depth; i++) printf("    ");
+    printf("PID: %d (PPID: %d)\n", node->pid, node->ppid);
+
+    for (int i = 0; i < node->childCount; i++) {
+        displayProcessTree(node->children[i], depth + 1);
+    }
+}
+```
+Rekursi digunakan untuk menampilkan pohon proses secara depth-first.
+Indentasi (depth) memberikan efek visual seperti cabang pohon.
+Hasilnya mirip pstree atau htop pada Linux.
+
+Menu Interaktif
+Pengguna diberi 3 opsi:
+
+Menambahkan proses (fork)
+
+Menampilkan pohon proses
+
+Keluar dari program
+
+Proses root dibuat pertama kali sebagai proses utama dengan PPID = 0.
 
 
 > Insert poin soal...
