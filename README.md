@@ -38,40 +38,20 @@ Struktur repository:
 
 ## Pengerjaan
 
-> Proses dan Identitas Proses
+> Buat program dengan menu untuk membuat fork dan menampilkan visualisasi fork yang dibuat (PID, PPID, dan hubungan garis).
 
 **Teori**
 
-Proses adalah program yang sedang dieksekusi. Dalam sistem operasi, setiap proses memiliki identitas unik berupa Process ID (PID) dan Parent Process ID (PPID) yang menunjukkan proses induk. Proses dapat membuat proses baru menggunakan sistem call seperti fork(). Setiap proses memiliki dua identitas penting:
+Dalam sistem operasi, proses adalah program yang sedang berjalan, memiliki PID (Process ID) dan PPID (Parent Process ID). Proses dapat membuat child process menggunakan system call fork(). Namun, fork() membuat proses baru dengan memori terpisah sehingga data child tidak otomatis tersimpan di parent.
 
-- PID (Process ID): Nomor unik yang diberikan oleh sistem untuk mengidentifikasi proses.
-- PPID (Parent Process ID): PID dari proses induk yang membuat proses tersebut.
-
-Proses membentuk hierarki yang dapat digambarkan dalam bentuk process tree, dimana satu proses induk dapat memiliki beberapa proses anak (child process).
+Untuk membangun dan menampilkan pohon proses, semua data PID dan hubungan parent-child harus tersimpan dalam satu memori yang sama. Oleh karena itu, simulasi fork lebih tepat digunakan agar pohon proses dapat ditampilkan secara utuh dan konsisten dalam satu program.
 
 **Solusi**
 
-Buat menu dengan opsi:
-- Buat proses (fork baru).
-- Tampilkan visualisasi pohon proses.
-- Keluar dari program.
-
-
-> Sistem Call Fork
-
-**Teori**
-
-fork() adalah sistem call di UNIX/Linux yang digunakan untuk menciptakan proses baru. Proses yang terbentuk disebut child process yang akan menjadi turunan dari proses induknya (parent process). Berikut ini beberapa jenis fork process:
-- Proses
-- Parent Process
-- Child Process
-- Process ID
-- Copy-on-Write
-- Return Value
-
-**Solusi**
-
-...
+- Menu interaktif: membuat fork, menampilkan pohon proses, dan keluar.
+- Setiap proses disimpan sebagai node dengan PID dan PPID.
+- Fork disimulasikan dengan memberi PID baru dan mencatat relasinya.
+- Visualisasi ditampilkan dengan traversal rekursif dan indentasi pohon.
 
 > Insert poin soal...
 
