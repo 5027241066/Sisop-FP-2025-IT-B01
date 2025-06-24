@@ -70,12 +70,14 @@ Tanenbaum menjelaskan bahwa proses dapat digambarkan sebagai struktur tree karen
 
 #### **Solusi**
 Struktur Data
+```
 typedef struct ProcessNode {
     int pid;
     int ppid;
     int childCount;
     struct ProcessNode* children[10];
 } ProcessNode;
+```
 Struct ProcessNode adalah representasi simpul pohon proses.
 Setiap simpul menyimpan:
 
@@ -122,17 +124,8 @@ Keluar dari program
 Proses root dibuat pertama kali sebagai proses utama dengan PPID = 0.
 
 
-> Insert poin soal...
 
-**Teori**
-
-...
-
-**Solusi**
-
-...
-
-**Video Menjalankan Program**
+### **Video Menjalankan Program**
 ...
 
 ## Daftar Pustaka
