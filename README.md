@@ -131,7 +131,8 @@ Proses root dibuat pertama kali sebagai proses utama dengan PPID = 0.
 ## Daftar Pustaka
 
 Sitasi 1
-Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). Operating System Concepts. Wiley.
-
+Silberschatz, A., Galvin, P. B., & Gagne, G. (2011). Operating System Concepts Essentials (8th ed.). John Wiley & Sons. [Lihat p. 110–111]
 Sitasi 2
+Stallings, W. (2018). Operating Systems: Internals and Design Principles (9th ed.). Pearson Education.
 Sitasi 3
+Tanenbaum, A. S., & Bos, H. (2015). Modern Operating Systems (4th ed.). Pearson. [Lihat p. 735–737]
