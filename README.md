@@ -28,8 +28,6 @@ Memvisualisasikan proses fork dalam sistem. Program menyediakan menu untuk membu
 
 ### Catatan
 
-> Insert catatan dari pengerjaan kalian... (contoh dibawah) // hapus line ini
-
 Struktur repository:
 ```
 .
