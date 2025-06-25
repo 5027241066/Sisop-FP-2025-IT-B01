@@ -132,7 +132,7 @@ Proses root dibuat pertama kali sebagai proses utama dengan PPID = 0.
 
 Sitasi 1
 
-Silberschatz, A., Galvin, P. B., & Gagne, G. (2011). Operating System Concepts Essentials (8th ed.). John Wiley & Sons. [Lihat p. 110–111]
+Silberschatz, A., Galvin, P. B., & Gagne, G. (2011). Operating System Concepts Essentials (8th ed.). John Wiley & Sons. [Lihat p. 108–111 (108=130 di pdf)]
 
 Sitasi 2
 
