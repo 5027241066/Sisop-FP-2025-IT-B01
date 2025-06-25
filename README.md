@@ -126,8 +126,8 @@ Proses root dibuat pertama kali sebagai proses utama dengan PPID = 0.
 
 
 ### **Video Menjalankan Program**
-...
 
+[Klik di sini untuk melihat video](https://github.com/user-attachments/assets/7d4e003c-45fa-4be0-93f1-ee7f623662e9)
 ## Daftar Pustaka
 
 Sitasi 1
