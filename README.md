@@ -112,20 +112,60 @@ Hasilnya mirip pstree atau htop pada Linux.
 
 Menu Interaktif
 Pengguna diberi 3 opsi:
-
 Menambahkan proses (fork)
-
 Menampilkan pohon proses
-
 Keluar dari program
 
 Proses root dibuat pertama kali sebagai proses utama dengan PPID = 0.
 
-### 
+### 4. Process Table & Process Control Block (PCB) ### 
+Silberschatz menjelaskan bahwa setiap proses di dalam sistem operasi direpresentasikan oleh Process Control Block (PCB) yang berisi informasi penting tentang proses tersebut. Semua PCB proses aktif disimpan oleh sistem dalam sebuah struktur yang disebut process table, yang memungkinkan sistem melakukan manajemen proses seperti penjadwalan dan terminasi.
+
+Solusi
+Struktur PCB
+``` c
+Copy
+Edit
+typedef struct ProcessNode {
+    int pid;
+    int ppid;
+    int childCount;
+    struct ProcessNode* children[10];
+} ProcessNode;
+```
+Struct ProcessNode berfungsi sebagai PCB simulasi, menyimpan ID proses (PID), ID parent (PPID), dan daftar anak-anaknya (relasi proses).
+
+Process Table
+```c
+Copy
+Edit
+ProcessNode* processList[100];
+int processCount = 0;
+
+void addProcess(ProcessNode* node) {
+    processList[processCount++] = node;
+}
+processList[] adalah representasi dari process table, tempat semua ProcessNode (PCB) disimpan dan dikelola.
+```
+
+Lookup Proses
+```c
+Copy
+Edit
+ProcessNode* findProcess(int pid) {
+    for (int i = 0; i < processCount; i++) {
+        if (processList[i]->pid == pid) {
+            return processList[i];
+        }
+    }
+    return NULL;
+}
+```
+Sebelum membuat child, sistem akan mencari parent di process table menggunakan PID, menyerupai proses lookup PCB oleh OS.
 
 
 
-### **Video Menjalankan Program**
+### **Video Menjalankan Program** ###
 
 [Klik di sini untuk melihat video](https://github.com/user-attachments/assets/7d4e003c-45fa-4be0-93f1-ee7f623662e9)
 ## Daftar Pustaka
