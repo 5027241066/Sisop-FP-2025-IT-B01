@@ -181,3 +181,7 @@ Stallings, W. (2018). Operating Systems: Internals and Design Principles (9th ed
 Sitasi 3
 
 Tanenbaum, A. S., & Bos, H. (2015). Modern Operating Systems (4th ed.). Pearson. [Lihat p. 735–737]
+
+Sitasi 4
+
+Silberschatz, Galvin, & Gagne, Operating System Concepts Essentials, 8th ed., John Wiley & Sons, 2011, p. 112
