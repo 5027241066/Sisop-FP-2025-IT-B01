@@ -68,7 +68,7 @@ Tanenbaum menjelaskan bahwa proses dapat digambarkan sebagai struktur tree karen
 
 #### **Solusi**
 Struktur Data
-```
+```c
 typedef struct ProcessNode {
     int pid;
     int ppid;
@@ -86,7 +86,7 @@ PPID: ID parent
 ChildCount dan array pointer ke proses anak
 
 Simulasi Fork
-```
+```c
 ProcessNode* child = createProcessNode(currentPID++, parent->pid);
 ```
 Saat pengguna memilih “Buat Fork” dari menu, proses anak baru dibuat dan ditambahkan ke parent->children.
@@ -96,7 +96,7 @@ Fungsi createProcessNode() menciptakan proses baru dengan PID unik.
 Proses ini tidak benar-benar memanggil fork() OS, tapi hanya membuat objek baru di memori dan menghubungkannya dengan induknya.
 
 Visualisasi Pohon
-```
+```c
 void displayProcessTree(ProcessNode* node, int depth) {
     for (int i = 0; i < depth; i++) printf("    ");
     printf("PID: %d (PPID: %d)\n", node->pid, node->ppid);
