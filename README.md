@@ -41,13 +41,13 @@ Struktur repository:
 
 ### **Teori**
 
-##### 1. Konsep Fork dan Hirarki Proses (Silberschatz)
+### 1. Konsep Fork dan Hirarki Proses (Silberschatz) ###
 Dalam sistem operasi modern seperti Unix/Linux, fork() adalah sistem call untuk membuat proses baru. Proses baru akan menjadi salinan dari proses pemanggil, membentuk hubungan induk-anak (parent-child). Proses-proses ini secara alami membentuk sebuah process tree atau pohon proses, seperti ditunjukkan pada Figure 3.9 di buku Silberschatz.
 
 “Each of these new processes may in turn create other processes, forming a tree of processes.”
 — Silberschatz, Operating System Concepts Essentials, p. 111
 
-##### 2. Deskripsi dan Struktur Proses (Stallings)
+### 2. Deskripsi dan Struktur Proses (Stallings) ###
 William Stallings menjelaskan bahwa setiap proses dalam sistem OS memiliki atribut penting seperti:
 
 PID (Process ID)
@@ -60,7 +60,7 @@ Child pointer list (untuk proses anak)
 
 Proses ini dikelola melalui Process Control Block (PCB) yang menyimpan semua informasi penting proses.
 
-##### 3. Visualisasi Hirarki Proses (Tanenbaum)
+### 3. Visualisasi Hirarki Proses (Tanenbaum) ###
 Tanenbaum menjelaskan bahwa proses dapat digambarkan sebagai struktur tree karena adanya relasi orang tua-anak antar proses. Setiap node memiliki PID, PPID, dan dapat memiliki banyak anak. Konsep ini penting untuk memahami interaksi proses dan manajemen memori/eksekusi.
 
 “Since children may also have children, an original process can build up an entire tree of children, grandchildren, and further descendants.”
@@ -120,6 +120,8 @@ Menampilkan pohon proses
 Keluar dari program
 
 Proses root dibuat pertama kali sebagai proses utama dengan PPID = 0.
+
+### 
 
 
 
