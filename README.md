@@ -44,8 +44,10 @@ Struktur repository:
 ### 1. Konsep Fork dan Hirarki Proses (Silberschatz) ###
 Dalam sistem operasi modern seperti Unix/Linux, fork() adalah sistem call untuk membuat proses baru. Proses baru akan menjadi salinan dari proses pemanggil, membentuk hubungan induk-anak (parent-child). Proses-proses ini secara alami membentuk sebuah process tree atau pohon proses, seperti ditunjukkan pada Figure 3.9 di buku Silberschatz.
 
-“Each of these new processes may in turn create other processes, forming a tree of processes.”
-— Silberschatz, Operating System Concepts Essentials, p. 111
+![3.9 Figure](https://example.com/path/to/image.png)
+
+Setiap proses dapat membuat proses baru (child proses) yang membuat proses-proses ini berbentuk seperti tree
+(Silberschatz, Operating System Concepts Essentials)
 
 ### 2. Deskripsi dan Struktur Proses (Stallings) ###
 William Stallings menjelaskan bahwa setiap proses dalam sistem OS memiliki atribut penting seperti:
@@ -63,8 +65,8 @@ Proses ini dikelola melalui Process Control Block (PCB) yang menyimpan semua inf
 ### 3. Visualisasi Hirarki Proses (Tanenbaum) ###
 Tanenbaum menjelaskan bahwa proses dapat digambarkan sebagai struktur tree karena adanya relasi orang tua-anak antar proses. Setiap node memiliki PID, PPID, dan dapat memiliki banyak anak. Konsep ini penting untuk memahami interaksi proses dan manajemen memori/eksekusi.
 
-“Since children may also have children, an original process can build up an entire tree of children, grandchildren, and further descendants.”
-— Tanenbaum, Modern Operating Systems, p. 737
+Setiap child proses dapat memiliki anak(child) lebih dari satu dan masing masing anaknya itu juga dapat memiliki anak lagi membentuk tree of processess yang dalam dan luas
+(Tanenbaum, Modern Operating Systems)
 
 #### **Solusi**
 Struktur Data
@@ -124,8 +126,6 @@ Silberschatz menjelaskan bahwa setiap proses di dalam sistem operasi direpresent
 Solusi
 Struktur PCB
 ``` c
-Copy
-Edit
 typedef struct ProcessNode {
     int pid;
     int ppid;
@@ -137,8 +137,6 @@ Struct ProcessNode berfungsi sebagai PCB simulasi, menyimpan ID proses (PID), ID
 
 Process Table
 ```c
-Copy
-Edit
 ProcessNode* processList[100];
 int processCount = 0;
 
@@ -150,8 +148,6 @@ processList[] adalah representasi dari process table, tempat semua ProcessNode (
 
 Lookup Proses
 ```c
-Copy
-Edit
 ProcessNode* findProcess(int pid) {
     for (int i = 0; i < processCount; i++) {
         if (processList[i]->pid == pid) {
@@ -180,7 +176,7 @@ Stallings, W. (2018). Operating Systems: Internals and Design Principles (9th ed
 
 Sitasi 3
 
-Tanenbaum, A. S., & Bos, H. (2015). Modern Operating Systems (4th ed.). Pearson. [Lihat p. 735–737]
+Tanenbaum, A. S., & Bos, H. (2015). Modern Operating Systems (4th ed.). Pearson. 
 
 Sitasi 4
 
