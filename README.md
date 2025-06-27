@@ -44,7 +44,7 @@ Struktur repository:
 ### 1. Konsep Fork dan Hirarki Proses (Silberschatz) ###
 Dalam sistem operasi modern seperti Unix/Linux, fork() adalah sistem call untuk membuat proses baru. Proses baru akan menjadi salinan dari proses pemanggil, membentuk hubungan induk-anak (parent-child). Proses-proses ini secara alami membentuk sebuah process tree atau pohon proses, seperti ditunjukkan pada Figure 3.9 di buku Silberschatz.
 
-![3.9 Figure](https://example.com/path/to/image.png)
+![3.9 Figure](./assets/process_tree_from_silberchatz)
 
 Setiap proses dapat membuat proses baru (child proses) yang membuat proses-proses ini berbentuk seperti tree
 (Silberschatz, Operating System Concepts Essentials)
