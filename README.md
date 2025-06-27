@@ -159,7 +159,19 @@ ProcessNode* findProcess(int pid) {
 ```
 Sebelum membuat child, sistem akan mencari parent di process table menggunakan PID, menyerupai proses lookup PCB oleh OS.
 
+### 5. Simulasi OS: Eksplorasi Parent-Child dan Wait (Jurnal Visualizing the Modern Operating System: Simulation Experiments Supporting Enhanced Learning. Business School, Edge Hill University, Ormskirk, UK.)
 
+Dalam sebuah jurnal mengenai simulator OS untuk pembelajaran oleh Mustafa B., dijelaskan bagaimana sistem simulator dapat membentuk dan memvisualisasikan relasi proses parent-child. Simulator tersebut memungkinkan mahasiswa untuk:
+
+Membuat proses baru dan mengamati hierarki proses melalui tampilan pohon proses.
+
+Memverifikasi bahwa child process mewarisi global memory dari parent-nya.
+
+Mengeksplorasi efek ketika parent process mati terhadap child-nya (anak menjadi orphan dan diadopsi oleh root/induk atas).
+
+Mempelajari peran statement wait() yang membuat parent tertunda hingga semua child selesai.
+
+Simulasi ini juga menunjukkan bagaimana wait dan fork diimplementasikan melalui software interrupt, memperlihatkan interaksi antara kode assembly, simulasi CPU, dan layanan OS.
 
 ### **Video Menjalankan Program** ###
 
@@ -181,3 +193,6 @@ Tanenbaum, A. S., & Bos, H. (2015). Modern Operating Systems (4th ed.). Pearson.
 Sitasi 4
 
 Silberschatz, Galvin, & Gagne, Operating System Concepts Essentials, 8th ed., John Wiley & Sons, 2011, p. 112
+
+Sitasi 5
+Mustafa, B. (n.d.). Visualizing the Modern Operating System: Simulation Experiments Supporting Enhanced Learning. Business School, Edge Hill University, Ormskirk, UK. Retrieved from https://research.edgehill.ac.uk/ws/portalfiles/portal/20096957/Paper_Final_Version_ACM_ITE_New_York_2011.pdf
