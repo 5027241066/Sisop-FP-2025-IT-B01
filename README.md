@@ -195,4 +195,4 @@ Sitasi 4
 Silberschatz, Galvin, & Gagne, Operating System Concepts Essentials, 8th ed., John Wiley & Sons, 2011, p. 112
 
 Sitasi 5
-Mustafa, B. (n.d.). Visualizing the Modern Operating System: Simulation Experiments Supporting Enhanced Learning. Business School, Edge Hill University, Ormskirk, UK. Retrieved from https://research.edgehill.ac.uk/ws/portalfiles/portal/20096957/Paper_Final_Version_ACM_ITE_New_York_2011.pdf
+Mustafa, B. (n.d.). Visualizing the Modern Operating System: Simulation Experiments Supporting Enhanced Learning. Business School, Edge Hill University, Ormskirk, UK. Retrieved from [https://research.edgehill.ac.uk/ws/portalfiles/portal/20096957/Paper_Final_Version_ACM_ITE_New_York_2011.pdf](https://doi.org/10.1145/2047594.2047650)
