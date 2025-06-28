@@ -74,12 +74,12 @@ typedef struct ProcessNode {
     struct ProcessNode* children[10];
 } ProcessNode;
 ```
-Struct ProcessNode adalah representasi simpul pohon proses.
-Setiap simpul menyimpan:
+Struct ProcessNode adalah representasi simpul pohon proses. 
+Setiap simpul menyimpan: 
 
-PID: ID unik proses
-PPID: ID parent
-ChildCount dan array pointer ke proses anak
+PID: ID unik proses 
+PPID: ID parent 
+ChildCount dan array pointer ke proses anak 
 
 Simulasi Fork
 ```c
