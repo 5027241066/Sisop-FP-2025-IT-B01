@@ -185,6 +185,7 @@ Silberschatz, A., Galvin, P. B., & Gagne, G. (2011). Operating System Concepts E
 
 Sitasi 2
 
+https://dl.acm.org/doi/10.5555/3307250  
 Stallings, W. (2018). Operating Systems: Internals and Design Principles (9th ed.). Pearson Education.
 
 Sitasi 3
