@@ -180,7 +180,7 @@ Simulasi ini juga menunjukkan bagaimana wait dan fork diimplementasikan melalui 
 
 Sitasi 1
 
-https://dl.acm.org/doi/book/10.5555/2601626
+https://dl.acm.org/doi/book/10.5555/2601626  
 Silberschatz, A., Galvin, P. B., & Gagne, G. (2011). Operating System Concepts Essentials (8th ed.). John Wiley & Sons. [Lihat p. 108–111 (108=130 di pdf)]
 
 Sitasi 2
@@ -193,10 +193,10 @@ Tanenbaum, A. S., & Bos, H. (2015). Modern Operating Systems (4th ed.). Pearson.
 
 Sitasi 4
 
-https://dl.acm.org/doi/book/10.5555/2601626
+https://dl.acm.org/doi/book/10.5555/2601626  
 Silberschatz, Galvin, & Gagne, Operating System Concepts Essentials, 8th ed., John Wiley & Sons, 2011, p. 112
 
 Sitasi 5
 
-[https://research.edgehill.ac.uk/ws/portalfiles/portal/20096957/Paper_Final_Version_ACM_ITE_New_York_2011.pdf](https://doi.org/10.1145/2047594.2047650)
+[https://research.edgehill.ac.uk/ws/portalfiles/portal/20096957/Paper_Final_Version_ACM_ITE_New_York_2011.pdf](https://doi.org/10.1145/2047594.2047650)  
 Mustafa, B. (n.d.). Visualizing the Modern Operating System: Simulation Experiments Supporting Enhanced Learning. Business School, Edge Hill University, Ormskirk, UK. Retrieved from 
