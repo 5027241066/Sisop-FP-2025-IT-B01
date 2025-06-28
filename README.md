@@ -50,20 +50,16 @@ Setiap proses dapat membuat proses baru (child proses) yang membuat proses-prose
 (Silberschatz, Operating System Concepts Essentials)
 
 ### 2. Deskripsi dan Struktur Proses (Stallings) ###
-William Stallings menjelaskan bahwa setiap proses dalam sistem OS memiliki atribut penting seperti:
+Setiap proses dalam sistem OS memiliki atribut penting seperti:
 
-PID (Process ID)
-
-PPID (Parent Process ID)
-
-State (status proses: running, ready, blocked)
-
-Child pointer list (untuk proses anak)
-
+PID (Process ID) 
+PPID (Parent Process ID) 
+State (status proses: running, ready, blocked) 
+Child pointer list (untuk proses anak) 
 Proses ini dikelola melalui Process Control Block (PCB) yang menyimpan semua informasi penting proses.
 
 ### 3. Visualisasi Hirarki Proses (Tanenbaum) ###
-Tanenbaum menjelaskan bahwa proses dapat digambarkan sebagai struktur tree karena adanya relasi orang tua-anak antar proses. Setiap node memiliki PID, PPID, dan dapat memiliki banyak anak. Konsep ini penting untuk memahami interaksi proses dan manajemen memori/eksekusi.
+Proses dapat digambarkan sebagai struktur tree karena adanya relasi orang tua-anak antar proses. Setiap node memiliki PID, PPID, dan dapat memiliki banyak anak. Konsep ini penting untuk memahami interaksi proses dan manajemen memori/eksekusi.
 
 Setiap child proses dapat memiliki anak(child) lebih dari satu dan masing masing anaknya itu juga dapat memiliki anak lagi membentuk tree of processess yang dalam dan luas
 (Tanenbaum, Modern Operating Systems)
@@ -82,19 +78,15 @@ Struct ProcessNode adalah representasi simpul pohon proses.
 Setiap simpul menyimpan:
 
 PID: ID unik proses
-
 PPID: ID parent
-
 ChildCount dan array pointer ke proses anak
 
 Simulasi Fork
 ```c
 ProcessNode* child = createProcessNode(currentPID++, parent->pid);
 ```
-Saat pengguna memilih “Buat Fork” dari menu, proses anak baru dibuat dan ditambahkan ke parent->children.
-
-Fungsi createProcessNode() menciptakan proses baru dengan PID unik.
-
+Saat pengguna memilih “Buat Fork” dari menu, proses anak baru dibuat dan ditambahkan ke parent->children. 
+Fungsi createProcessNode() menciptakan proses baru dengan PID unik. 
 Proses ini tidak benar-benar memanggil fork() OS, tapi hanya membuat objek baru di memori dan menghubungkannya dengan induknya.
 
 Visualisasi Pohon
@@ -121,7 +113,7 @@ Keluar dari program
 Proses root dibuat pertama kali sebagai proses utama dengan PPID = 0.
 
 ### 4. Process Table & Process Control Block (PCB) ### 
-Silberschatz menjelaskan bahwa setiap proses di dalam sistem operasi direpresentasikan oleh Process Control Block (PCB) yang berisi informasi penting tentang proses tersebut. Semua PCB proses aktif disimpan oleh sistem dalam sebuah struktur yang disebut process table, yang memungkinkan sistem melakukan manajemen proses seperti penjadwalan dan terminasi.
+Setiap proses di dalam sistem operasi direpresentasikan oleh Process Control Block (PCB) yang berisi informasi penting tentang proses tersebut. Semua PCB proses aktif disimpan oleh sistem dalam sebuah struktur yang disebut process table, yang memungkinkan sistem melakukan manajemen proses seperti penjadwalan dan terminasi.
 
 Solusi
 Struktur PCB
@@ -163,15 +155,11 @@ Sebelum membuat child, sistem akan mencari parent di process table menggunakan P
 
 Dalam sebuah jurnal mengenai simulator OS untuk pembelajaran oleh Mustafa B., dijelaskan bagaimana sistem simulator dapat membentuk dan memvisualisasikan relasi proses parent-child. Simulator tersebut memungkinkan mahasiswa untuk:
 
-Membuat proses baru dan mengamati hierarki proses melalui tampilan pohon proses.
-
-Memverifikasi bahwa child process mewarisi global memory dari parent-nya.
-
-Mengeksplorasi efek ketika parent process mati terhadap child-nya (anak menjadi orphan dan diadopsi oleh root/induk atas).
-
-Mempelajari peran statement wait() yang membuat parent tertunda hingga semua child selesai.
-
-Simulasi ini juga menunjukkan bagaimana wait dan fork diimplementasikan melalui software interrupt, memperlihatkan interaksi antara kode assembly, simulasi CPU, dan layanan OS.
+Membuat proses baru dan mengamati hierarki proses melalui tampilan pohon proses. 
+Memverifikasi bahwa child process mewarisi global memory dari parent-nya. 
+Mengeksplorasi efek ketika parent process mati terhadap child-nya (anak menjadi orphan dan diadopsi oleh root/induk atas). 
+Mempelajari peran statement wait() yang membuat parent tertunda hingga semua child selesai. 
+Simulasi ini juga menunjukkan bagaimana wait dan fork diimplementasikan melalui software interrupt, memperlihatkan interaksi antara kode assembly, simulasi CPU, dan layanan OS. 
 
 ### **Video Menjalankan Program** ###
 
@@ -190,7 +178,7 @@ Stallings, W. (2018). Operating Systems: Internals and Design Principles (9th ed
 
 Sitasi 3
 
-Tanenbaum, A. S., & Bos, H. (2015). Modern Operating Systems (4th ed.). Pearson. 
+Tanenbaum, A. S. & Bos, H. (2015). Modern Operating Systems (4th ed.). Pearson. ISBN 978‑0133591620. 
 
 Sitasi 4
 
