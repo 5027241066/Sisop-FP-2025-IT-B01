@@ -163,7 +163,6 @@ Simulasi ini juga menunjukkan bagaimana wait dan fork diimplementasikan melalui 
 
 ### **Video Menjalankan Program** ###
 
-https://drive.google.com/drive/folders/1ywwgdBKK_W-VjBokNC1NFgJAS0DnoeX_?hl=ID
 ## Daftar Pustaka ###
 
 Sitasi 1
