@@ -11,7 +11,7 @@ typedef struct ProcessNode {
 
 ProcessNode* processList[100];
 int processCount = 0;
-int currentPID = 1; // PID simulasi, mulai dari 1
+int currentPID = 1; 
 
 // Membuat node proses baru
 ProcessNode* createProcessNode(int pid, int ppid) {
@@ -60,11 +60,21 @@ int main() {
         printf("2. Tampilkan Pohon Proses\n");
         printf("3. Keluar\n");
         printf("Pilihan: ");
-        scanf("%d", &choice);
+        if (scanf("%d", &choice) != 1) {
+            printf("Input salah!\n");
+            int c;
+            while ((c = getchar()) != '\n' && c != EOF); // clear input buffer
+            continue;
+        }
 
         if (choice == 1) {
             printf("Masukkan PID parent (contoh: 1): ");
-            scanf("%d", &parentPID);
+            if (scanf("%d", &parentPID) != 1) {
+                printf("Input salah!\n");
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF); // clear input buffer
+                continue;
+            }
 
             ProcessNode* parent = findProcess(parentPID);
             if (parent == NULL) {
