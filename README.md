@@ -162,6 +162,7 @@ Mempelajari peran statement wait() yang membuat parent tertunda hingga semua chi
 Simulasi ini juga menunjukkan bagaimana wait dan fork diimplementasikan melalui software interrupt, memperlihatkan interaksi antara kode assembly, simulasi CPU, dan layanan OS. 
 
 ### **Video Menjalankan Program** ###
+https://github.com/user-attachments/assets/72fd89d8-0841-4115-8476-cc33b152ffbe
 
 ## Daftar Pustaka ###
 
